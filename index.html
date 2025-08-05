@@ -19,7 +19,7 @@
         </div>
 
         <nav class="flex gap-6">
-          <ul id="MenuItems" class="flex flex-col gap-4 absolute top-[70px] left-0 w-full bg-[#333] items-end overflow-hidden transition-[max-height] duration-500 md:static md:bg-transparent md:flex-row md:overflow-auto">
+          <ul id="MenuItems" class="flex flex-col gap-4 absolute top-[70px] left-0 w-full bg-[#333] items-end overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-[0px] md:max-h-[28px] md:static md:bg-transparent md:flex-row">
             <li class="mt-1 mr-11 md:mt-0 md:mr-0"><a class="text-white md:text-black" href="">Home</a></li>
             <li class="mt-1 mr-11 md:mt-0 md:mr-0"><a class="text-white md:text-black" href="">Product</a></li>
             <li class="mt-1 mr-11 md:mt-0 md:mr-0"><a class="text-white md:text-black" href="">About</a></li>
@@ -473,14 +473,15 @@
   </footer>
 
   <script>
-    var MenuItems = document.getElementById("MenuItems");
-    MenuItems.style.maxHeight = "0px";
-
     function menutoggle(){
-      if (MenuItems.style.maxHeight == "0px") {
-        MenuItems.style.maxHeight = "200px";
-      } else{
-        MenuItems.style.maxHeight = "0px";
+      var menuItems = document.getElementById('MenuItems');
+
+      if (menuItems.classList.contains('max-h-[0px]')){
+        menuItems.classList.remove('max-h-[0px]');
+        menuItems.classList.add('max-h-[200px]');
+      } else {
+        menuItems.classList.remove('max-h-[200px]');
+        menuItems.classList.add('max-h-[0px]');
       }
     }
   </script>
