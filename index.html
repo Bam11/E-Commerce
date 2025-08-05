@@ -18,16 +18,16 @@
           <img src="images/logo.png" alt="logo" width="125px">
         </div>
 
-        <nav>
-          <ul class="flex gap-6">
-            <li><a href="">Home</a></li>
-            <li><a href="">Product</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Account</a></li>
-            <img src="images/cart.png" alt="" class="w-7 h-7">
+        <nav class="flex gap-6">
+          <ul id="MenuItems" class="flex flex-col gap-4 absolute top-[70px] left-0 w-full bg-[#333] items-end overflow-hidden transition-[max-height] duration-500 md:static md:bg-transparent md:flex-row md:overflow-auto">
+            <li class="mt-1 mr-11 md:mt-0 md:mr-0"><a class="text-white md:text-black" href="">Home</a></li>
+            <li class="mt-1 mr-11 md:mt-0 md:mr-0"><a class="text-white md:text-black" href="">Product</a></li>
+            <li class="mt-1 mr-11 md:mt-0 md:mr-0"><a class="text-white md:text-black" href="">About</a></li>
+            <li class="mt-1 mr-11 md:mt-0 md:mr-0"><a class="text-white md:text-black" href="">Contact</a></li>
+            <li class="mt-1 mr-11 md:mt-0 md:mr-0"><a class="text-white md:text-black" href="">Account</a></li>
           </ul>
-          <img src="images/menu.png" alt="" class="w-7 md:hidden">
+          <img src="images/cart.png" alt="" class="w-7 h-7">
+          <img src="images/menu.png" alt="" class="w-7 cursor-pointer md:hidden" onclick="menutoggle()">
         </nav>
       </div>
     </div>
@@ -472,6 +472,17 @@
     </section>
   </footer>
 
-  
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+      if (MenuItems.style.maxHeight == "0px") {
+        MenuItems.style.maxHeight = "200px";
+      } else{
+        MenuItems.style.maxHeight = "0px";
+      }
+    }
+  </script>
 </body>
 </html>
