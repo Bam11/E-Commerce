@@ -39,29 +39,29 @@
 
     <!--------------Single Product Details-------------->
 
-    <section class="max-w-[1080px] mx-auto mt-20 px-6 flex flex-col sm:flex-row items-center text-center sm:text-left justify-around my-17">
-      <div class="basis-full sm:basis-1/2 min-w-[300px] ">
-        <img src="images/gallery-1.jpg" class="w-full p-0 mb-1">
+    <section class="max-w-[1080px] mx-auto mt-20 px-6 flex flex-col sm:flex-row items-center text-left justify-around my-17 ">
+      <div class="basis-full sm:basis-1/2 min-w-[300px] py-5 px-0 sm:p-0 ">
+        <img src="images/gallery-1.jpg" class="w-full p-0 mb-1" id="ProductImg">
 
         <div class="flex justify-between">
           <div class="basis-[24%] cursor-pointer">
-            <img src="images/gallery-1.jpg" alt="">
+            <img src="images/gallery-1.jpg" alt="" class="small-img ">
           </div>
           <div class="basis-[24%] cursor-pointer">
-            <img src="images/gallery-2.jpg" alt="">
+            <img src="images/gallery-2.jpg" alt="" class="small-img ">
           </div>
           <div class="basis-[24%] cursor-pointer">
-            <img src="images/gallery-3.jpg" alt="">
+            <img src="images/gallery-3.jpg" alt="" class="small-img ">
           </div>
           <div class="basis-[24%] cursor-pointer">
-            <img src="images/gallery-4.jpg" alt="">
+            <img src="images/gallery-4.jpg" alt="" class="small-img ">
           </div>
         </div>
 
       </div>
-      <div class="basis-full sm:basis-1/2 min-w-[300px] p-5">
+      <div class="basis-full sm:basis-1/2 min-w-[300px] py-5 px-0 sm:px-5 sm:py-0">
         <p>Home / T-Shirt</p>
-        <h1 class="text-[50px] leading-15 py-6 font-semibold">Red Printed T-Shirt by HRX</h1>
+        <h1 class="sm:text-[50px] sm:leading-15 text-2xl leading-8 py-6 font-semibold">Red Printed T-Shirt by HRX</h1>
         <h4 class="text-[#555] font-bold my-5 mx-0">$50.00</h4>
         <select name="" id="" class="border border-red-500 p-2 focus:outline-none block mt-5">
           <option  value="">Select Size</option>
@@ -86,7 +86,16 @@
 
     </section>
 
-    <!--------------Featured Product -------------->
+    <!-------------Title------------->
+    <section class="max-w-[1080px] mx-auto px-6 ">
+      <div class="flex text-left items-center justify-between mt-[100px] mb-12 mx-auto">
+        <h2 class="font-semibold text-lg">Related Products</h2>
+        <p>View More</p>
+      </div>
+
+    </section>
+
+    <!-------------- Product -------------->
     <section class="max-w-[1080px] mx-auto px-6">
 
       <div class="flex flex-col sm:flex-row text-center sm:text-left items-center justify-between">
@@ -221,6 +230,22 @@
         menuItems.classList.remove('max-h-[200px]');
         menuItems.classList.add('max-h-[0px]');
       }
+    }
+
+    var ProductImg = document.getElementById("ProductImg");
+    var SmallImg = document.getElementsByClassName("small-img");
+
+    SmallImg[0].onclick = function(){
+      ProductImg.src = SmallImg[0].src;
+    }
+    SmallImg[1].onclick = function(){
+      ProductImg.src = SmallImg[1].src;
+    }
+    SmallImg[2].onclick = function(){
+      ProductImg.src = SmallImg[2].src;
+    }
+    SmallImg[3].onclick = function(){
+      ProductImg.src = SmallImg[3].src;
     }
   </script>
 </body>
