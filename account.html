@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/ebbaca388e.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>Cart - Redstore</title>
+  <title>Login - Redstore </title>
 </head>
 <body>
   <header class="">
@@ -37,96 +37,40 @@
 
   <main>
 
-    <!-------------Cart Item DetailsTitle------------->
-    <section class="max-w-[1080px] mx-auto px-6 my-[80px]">
-      <table class="w-full border-collapse">
-        <tr>
-          <th class="text-left p-[5px] text-white bg-red-500 font-normal last:text-right">Product</th>
-          <th class="text-left p-[5px] text-white bg-red-500 font-normal last:text-right">Quantity</th>
-          <th class="text-left p-[5px] text-white bg-red-500 font-normal last:text-right">Subtotal</th>
-        </tr>
-
-        <tr>
-          <td class="py-2 px-5 last:text-right">
-
-            <div class="flex flex-wrap ">
-              <img class="w-20 h-20 mr-2" src="images/buy-1.jpg" alt="">
-              <div>
-                <p class="hidden sm:block">Red Printed T-Shirt</p>
-                <small>Price: $50.00</small>
-                <br>
-                <button type="button"><a class="text-red-500 text-sm" href="">Remove</a></button>
+    <!---------------Account Page------------------>
+    <section class="py-12 px-0 bg-radial from-#fff to-red-100">
+      <div class="max-w-[1300px] m-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center text-center sm:text-left justify-around">
+          <div class="basis-full sm:basis-1/2 min-w-[300px]">
+            <img src="images/image1.png" alt="" class="w-full">
+          </div>
+          <div class="basis-full sm:basis-1/2 min-w-[300px]">
+            <div class="bg-white w-[300px] h-[400px] text-center py-5 px-0 m-auto relative shadow-[0_0_20px_0px_rgba(0,0,0,0.1)] overflow-hidden">
+              <div class="inline-block">
+                <span class="font-bold py-0 px-2 text-[555] cursor-pointer w-[100px] inline-block" onclick="login()">Login</span>
+                <span class="font-bold py-0 px-2 text-[555] cursor-pointer w-[100px] inline-block" onclick="register()">Register</span>
+                <hr id="Indicator" class="w-[100px] border-none bg-red-500 h-1 mt-2 translate-x-[100px] transition-[transform] duration-1000">
               </div>
+
+              <form id="LoginForm" action="" class="w-[300px] py-0 px-5 absolute top-[130px] left-[-300px] transition-[transform] duration-1000">
+                <input class="w-full h-[30px] my-2 mx-0 py-0 px-2 border border-[#ccc] focus:outline-none" type="text" placeholder="Username">
+                <input class="w-full h-[30px] my-2 mx-0 py-0 px-2 border border-[#ccc] focus:outline-none" type="Password" placeholder="Password">
+                <button type="submit" class="bg-orange-700 hover:bg-orange-950 transition-colors duration-500 text-white inline-block py-2 px-7 rounded-[30px] w-full border-none cursor-pointer my-2 mx-0 focus:outline-none">Login</button>
+                <a class="text-sm" href="">Forgot Password</a>
+              </form>
+
+              <form id="RegForm" action="" class="w-[300px] py-0 px-5 absolute top-[130px] left-0 transition-[transform] duration-1000">
+                <input class="w-full h-[30px] my-2 mx-0 py-0 px-2 border border-[#ccc] focus:outline-none" type="text" placeholder="Username">
+                <input class="w-full h-[30px] my-2 mx-0 py-0 px-2 border border-[#ccc] focus:outline-none" type="email" placeholder="Email">
+                <input class="w-full h-[30px] my-2 mx-0 py-0 px-2 border border-[#ccc] focus:outline-none" type="Password" placeholder="Password">
+                <button type="submit" class="bg-orange-700 hover:bg-orange-950 transition-colors duration-500 text-white inline-block py-2 px-7 rounded-[30px] w-full border-none cursor-pointer my-2 mx-0 focus:outline-none">Register</button>
+              </form>
             </div>
-
-          </td>
-          <td class="py-2 px-5 last:text-right">
-            <input class="w-10 h-8 p-1" type="number" value="1">
-          </td>
-          <td class="py-2 px-5 last:text-right">$50.00</td>
-        </tr>
-
-        <tr>
-          <td class="py-2 px-5 last:text-right">
-
-            <div class="flex flex-wrap">
-              <img class="w-20 h-20 mr-2" src="images/buy-2.jpg" alt="">
-              <div>
-                <p class="hidden sm:block">Red Printed T-Shirt</p>
-                <small>Price: $75.00</small>
-                <br>
-                <button type="button"><a class="text-red-500 text-sm" href="">Remove</a></button>
-              </div>
-            </div>
-
-          </td>
-          <td class="py-2 px-5 last:text-right">
-            <input class="w-10 h-8 p-1" type="number" value="1">
-          </td>
-          <td class="py-2 px-5 last:text-right">$75.00</td>
-        </tr>
-
-        <tr>
-          <td class="py-2 px-5 last:text-right">
-
-            <div class="flex flex-wrap">
-              <img class="w-20 h-20 mr-2" src="images/buy-3.jpg" alt="">
-              <div>
-                <p class="hidden sm:block">Red Printed T-Shirt</p>
-                <small>Price: $75.00</small>
-                <br>
-                <button type="button"><a class="text-red-500 text-sm" href="">Remove</a></button>
-              </div>
-            </div>
-
-          </td>
-          <td class="py-2 px-5 last:text-right">
-            <input class="w-10 h-8 p-1 " type="number" value="1">
-          </td>
-          <td class="py-2 px-5 last:text-right">$75.00</td>
-        </tr>
-
-      </table>
-
-      <div id="total-price" class="flex justify-end">
-        <table class="w-full border-collapse border-t-[3px] border-t-red-500 max-w-[400px]">
-          <tr>
-            <td class="py-2 px-5 last:text-right">Subtotal</td>
-            <td class="py-2 px-5 last:text-right">$250.00</td>
-          </tr>
-          <tr>
-            <td class="py-2 px-5 last:text-right">Tax</td>
-            <td class="py-2 px-5 last:text-right">$25.00</td>
-          </tr>
-          <tr>
-            <td class="py-2 px-5 last:text-right">Total</td>
-            <td class="py-2 px-5 last:text-right">$250.00</td>
-          </tr>
-        </table>
+          </div>
+        </div>  
       </div>
-
+      
     </section>
-    
   </main>
 
   <!-------------Footer------------->
@@ -186,6 +130,38 @@
         menuItems.classList.remove('max-h-[200px]');
         menuItems.classList.add('max-h-[0px]');
       }
+    }
+
+    function login(){
+      const LoginForm = document.getElementById("LoginForm");
+      const RegForm = document.getElementById("RegForm");
+      const Indicator = document.getElementById("Indicator");
+
+      RegForm.style.transform = "translateX(300px)";
+      LoginForm.style.transform = "translateX(300px)";
+      Indicator.style.transform = "translateX(-100px)";
+      /*
+      LoginForm.classList.add('translate-x-0');
+      RegForm.classList.remove('translate-x-[300px]');
+
+      RegForm.classList.add('translate-x-[300px]');
+      RegForm.classList.remove('translate-x-0');*/
+    }
+
+    function register(){
+      const LoginForm = document.getElementById("LoginForm");
+      const RegForm = document.getElementById("RegForm");
+      const Indicator = document.getElementById("Indicator");
+
+      RegForm.style.transform = "translateX(0px)";
+      LoginForm.style.transform = "translateX(0px)";
+      Indicator.style.transform = "translateX(0px)";
+      /*
+      LoginForm.classList.add('translate-x-[300px]');
+      LoginForm.classList.remove('translate-x-0');
+
+      RegForm.classList.add('translate-x-0');
+      RegForm.classList.remove('translate-x-[300px]');*/
     }
 
   </script>
